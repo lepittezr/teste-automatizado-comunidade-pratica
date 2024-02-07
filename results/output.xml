@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-07T17:23:17.417646" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste-Automatizado-Comunidade-Pratica" source="C:\Users\lelet\OneDrive\Documentos\Programmer\IQS\teste-automatizado-comunidade-pratica">
+<suite id="s1-s1" name="Login" source="C:\Users\lelet\OneDrive\Documentos\Programmer\IQS\teste-automatizado-comunidade-pratica\Login">
+<suite id="s1-s1-s1" name="Login" source="C:\Users\lelet\OneDrive\Documentos\Programmer\IQS\teste-automatizado-comunidade-pratica\Login\login.robot">
+<test id="s1-s1-s1-t1" name="TC001 - Realizar Login com usuário válido" line="47">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-02-07T17:23:17.789939" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:17.791935" level="INFO">Opening browser 'chrome' to base url 'http://sistemas.t2mlab.com:3009/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-07T17:23:17.790939" elapsed="11.903986"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-07T17:23:29.710149" elapsed="0.267175"/>
+</kw>
+<kw name="Realizar Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:29.982833" level="INFO">Typing text 'Alan' into text field 'id:formBasicEmail'.</msg>
+<arg>${LOGIN_PAGE.UsernameInput}</arg>
+<arg>Alan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:29.979674" elapsed="0.289109"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:30.272913" level="INFO">Typing password into text field 'id:formBasicPassword'.</msg>
+<msg time="2024-02-07T17:23:30.374634" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${LOGIN_PAGE.PasswordInput}</arg>
+<arg>123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:30.268783" elapsed="0.249773"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:30.520405" level="INFO">Clicking element 'css=.botao-default'.</msg>
+<arg>${LOGIN_PAGE.LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:30.519428" elapsed="0.172250"/>
+</kw>
+<status status="PASS" start="2024-02-07T17:23:29.978321" elapsed="0.713357"/>
+</kw>
+<kw name="Selecionar Módulo">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SELECT_MODULE}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-07T17:23:30.694672" elapsed="0.620440"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:31.316158" level="INFO">Clicking element 'css=.col-lg-3:nth-child(4) .MuiCardMedia-root'.</msg>
+<arg>${SELECT_MODULE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:31.315112" elapsed="0.280484"/>
+</kw>
+<status status="PASS" start="2024-02-07T17:23:30.692831" elapsed="0.902765"/>
+</kw>
+<kw name="Cadastrar Comunidade">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAD_COMUNIDADE.CadastrarComunidade}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-07T17:23:31.597591" elapsed="0.362452"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:31.962997" level="INFO">Clicking element 'css=.bRyZhd &gt; .botao-default'.</msg>
+<arg>${CAD_COMUNIDADE.CadastrarComunidade}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:31.961041" elapsed="0.138621"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:32.104885" level="INFO">Typing text 'https://img.freepik.com/vetores-gratis/mao-desenhada-pessoas-felizes-pulando_23-2149092878.jpg' into text field 'id=validationCustom01'.</msg>
+<arg>${CAD_COMUNIDADE.LinkImagem}</arg>
+<arg>https://img.freepik.com/vetores-gratis/mao-desenhada-pessoas-felizes-pulando_23-2149092878.jpg</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:32.100974" elapsed="1.374813"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:33.477782" level="INFO">Typing text 'Evangelson' into text field 'css=.col-md-6 &gt; #validationCustom01'.</msg>
+<arg>${CAD_COMUNIDADE.NomeLider}</arg>
+<arg>Evangelson</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:33.476787" elapsed="0.309803"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:33.788585" level="INFO">Typing text 'Diversão' into text field 'id=validationCustom02'.</msg>
+<arg>${CAD_COMUNIDADE.Categoria}</arg>
+<arg>Diversão</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:33.787587" elapsed="0.192190"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:33.981772" level="INFO">Typing text 'Discussão do dia: Biscoito ou bolacha? (BISCOITO, óbvio)' into text field ' id=validationCustom03'.</msg>
+<arg>${CAD_COMUNIDADE.Descricao}</arg>
+<arg>Discussão do dia: Biscoito ou bolacha? (BISCOITO, óbvio)</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:33.979777" elapsed="0.442813"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-07T17:23:34.424585" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar')]'.</msg>
+<arg>${CAD_COMUNIDADE.BotaoEnviar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T17:23:34.422590" elapsed="0.075265"/>
+</kw>
+<status status="PASS" start="2024-02-07T17:23:31.596596" elapsed="2.901259"/>
+</kw>
+<status status="PASS" start="2024-02-07T17:23:17.786949" elapsed="16.711952"/>
+</test>
+<status status="PASS" start="2024-02-07T17:23:17.498660" elapsed="17.015203"/>
+</suite>
+<status status="PASS" start="2024-02-07T17:23:17.493679" elapsed="17.026128"/>
+</suite>
+<status status="PASS" start="2024-02-07T17:23:17.425066" elapsed="17.098729"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste-Automatizado-Comunidade-Pratica">Teste-Automatizado-Comunidade-Pratica</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login">Teste-Automatizado-Comunidade-Pratica.Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Login">Teste-Automatizado-Comunidade-Pratica.Login.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
